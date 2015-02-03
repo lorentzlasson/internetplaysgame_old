@@ -1,0 +1,7 @@
+applications:
+- disk_quota: 1024M
+  host: internetplaysgame
+  name: internetplaysgame
+  path: webStarterApp.war
+  instances: 1
+  memory: 1024M

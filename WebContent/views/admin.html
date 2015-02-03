@@ -1,0 +1,14 @@
+<div class="container well">
+	<input type="password" class="form-control form-block" ng-model="config.adminKey" placeholder="admin key">
+	<form ng-submit="newGame()" class="form form-inline top-buffer-s">
+		<input type="number" class="form-control" ng-model="config.size" placeholder="board size">
+		<input type="number" class="form-control" ng-model="config.playerCap" placeholder="player cap">
+		<select class="form-control" ng-options="item for item in gameModes" ng-model="config.gameMode"></select>
+		<button type="submit" class="btn btn-primary">New game</button>
+	</form>
+
+	<div class="top-buffer-s">
+		<button type="button" ng-click="endGame()" class="btn btn-danger">Stop game</button>
+		<button type="button" ng-click="disposeInactives()" class="btn btn-default">Dispose inactives</button>
+	</div>
+</div>

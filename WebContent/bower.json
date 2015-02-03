@@ -1,0 +1,22 @@
+{
+  "name": "WebContent",
+  "version": "0.0.0",
+  "authors": [
+    "Lorentz Lasson <lorentz.lasson@se.ibm.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.11.0",
+    "angular-route": "1.2.15",
+    "bootstrap-css-only": "~3.2.0",
+    "ng-notify": "~0.5.0"
+  }
+}

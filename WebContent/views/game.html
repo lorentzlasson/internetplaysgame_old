@@ -1,0 +1,35 @@
+<div class="container well">
+	<div class="col-md-6 col-md-offset-3">
+		<h1 class="text-danger">{{errorMessage}}</h1>	
+	</div>
+	<div ng-show="board">
+		<div class="col-md-4">
+			<b>Resources: </b><span>{{board.user.resource + board.user.tickingResource}}</span>
+			<progress max="20">				
+				<bar ng-show="board.user.resource" value="board.user.resource"></bar>
+				<bar value="board.user.tickingResource" ></bar>
+			</progress>
+			<h3>Score board</h3>
+			<table class="table">
+				<tr ng-repeat="user in board.pubUsers" ng-class="{success: user.id==board.user.id}">
+					<td>User: {{user.id}}</td>
+					<td>Score: {{user.score}}</td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-8">
+
+			<div tabindex="0" ng-keydown="keyBoardMove($event)" ng-show="board">
+				<table class="gameBoard">
+					<tr ng-repeat="row in board.grid.grid">
+						<td ng-style="style()" resize class="outer-cell" ng-repeat="cell in row track by $index">
+							<div class="inner-cell">
+								<div class="helper" ng-include="resolveEntityPath(cell)"></div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>	
+</div>

@@ -1,0 +1,28 @@
+body {
+  background-color: #3b4b54;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.top-buffer-l {
+  margin-top: 50px;
+}
+
+.top-buffer-m {
+  margin-top: 20px;
+}
+
+.top-buffer-s {
+  margin-top: 10px;
+}
+
+.gameBoard {
+	width: 100%;
+	table-layout: fixed;
+}
+
+.gameBoard tr{
+	width: 100%;
+}

@@ -1,0 +1,13 @@
+<form ng-submit="ok()">
+    <div class="modal-header">
+        <h3 class="modal-title">Game over</h3>
+    </div>
+    <div class="modal-body">
+        You scored {{highScore.score}} points. <br>
+        Enter nick name: <input ng-model="highScore.nickName">
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</form>
